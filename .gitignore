@@ -26,10 +26,10 @@ WrappedNativeApp/Release/
 WrappedNativeApp/Releas64/
 
 # Output directories
-Debug/
-Debug64/
-Release/
-Releas64/
+Debug/*
+Debug64/*
+Release/*
+Releas64/*
 
 # User-specific files
 *.suo

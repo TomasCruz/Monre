@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{101D19EB-1EE3-4F07-B5DB-B9AD8EE485E1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OpenGLFormApplication</RootNamespace>
+    <AssemblyName>OpenGLFormApplication</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <NoStdLib>true</NoStdLib>
+    <MSCoreLibraryPath>C:\Windows\Microsoft.NET\Framework\v2.0.50727\mscorlib.dll</MSCoreLibraryPath>
+    <SystemLibraryPath>C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.dll</SystemLibraryPath>
+    <SystemDrawingPath>C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Drawing.dll</SystemDrawingPath>
+    <SystemWindowsFormsPath>C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Windows.Forms.dll</SystemWindowsFormsPath>
+    <ThreadManagerLibraryPath>..\Debug\ThreadManager.dll</ThreadManagerLibraryPath>
+    <WrappedNativeAppLibraryPath>..\Debug\WrappedNativeApp.dll</WrappedNativeAppLibraryPath>
+    <OpenGLFormLibraryPath>..\Debug\OpenGLForm.dll</OpenGLFormLibraryPath>
+    <ApplicationDllPath>..\Debug\ApplicationDll.dll</ApplicationDllPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>..\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <NoStdLib>true</NoStdLib>
+    <MSCoreLibraryPath>C:\Windows\Microsoft.NET\Framework\v2.0.50727\mscorlib.dll</MSCoreLibraryPath>
+    <SystemLibraryPath>C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.dll</SystemLibraryPath>
+    <SystemDrawingPath>C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Drawing.dll</SystemDrawingPath>
+    <SystemWindowsFormsPath>C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Windows.Forms.dll</SystemWindowsFormsPath>
+    <ThreadManagerLibraryPath>..\Release\ThreadManager.dll</ThreadManagerLibraryPath>
+    <WrappedNativeAppLibraryPath>..\Release\WrappedNativeApp.dll</WrappedNativeAppLibraryPath>
+    <OpenGLFormLibraryPath>..\Release\OpenGLForm.dll</OpenGLFormLibraryPath>
+    <ApplicationDllPath>..\Release\ApplicationDll.dll</ApplicationDllPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\Debug64\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <MSCoreLibraryPath>C:\Windows\Microsoft.NET\Framework64\v2.0.50727\mscorlib.dll</MSCoreLibraryPath>
+    <SystemLibraryPath>C:\Windows\Microsoft.NET\Framework64\v2.0.50727\System.dll</SystemLibraryPath>
+    <SystemDrawingPath>C:\Windows\Microsoft.NET\Framework64\v2.0.50727\System.Drawing.dll</SystemDrawingPath>
+    <SystemWindowsFormsPath>C:\Windows\Microsoft.NET\Framework64\v2.0.50727\System.Windows.Forms.dll</SystemWindowsFormsPath>
+    <ThreadManagerLibraryPath>..\Debug64\ThreadManager.dll</ThreadManagerLibraryPath>
+    <WrappedNativeAppLibraryPath>..\Debug64\WrappedNativeApp.dll</WrappedNativeAppLibraryPath>
+    <OpenGLFormLibraryPath>..\Debug64\OpenGLForm.dll</OpenGLFormLibraryPath>
+    <ApplicationDllPath>..\Debug64\ApplicationDll.dll</ApplicationDllPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <OutputPath>..\Release64\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <MSCoreLibraryPath>C:\Windows\Microsoft.NET\Framework64\v2.0.50727\mscorlib.dll</MSCoreLibraryPath>
+    <SystemLibraryPath>C:\Windows\Microsoft.NET\Framework64\v2.0.50727\System.dll</SystemLibraryPath>
+    <SystemDrawingPath>C:\Windows\Microsoft.NET\Framework64\v2.0.50727\System.Drawing.dll</SystemDrawingPath>
+    <SystemWindowsFormsPath>C:\Windows\Microsoft.NET\Framework64\v2.0.50727\System.Windows.Forms.dll</SystemWindowsFormsPath>
+    <ThreadManagerLibraryPath>..\Release64\ThreadManager.dll</ThreadManagerLibraryPath>
+    <WrappedNativeAppLibraryPath>..\Release64\WrappedNativeApp.dll</WrappedNativeAppLibraryPath>
+    <OpenGLFormLibraryPath>..\Release64\OpenGLForm.dll</OpenGLFormLibraryPath>
+    <ApplicationDllPath>..\Release64\ApplicationDll.dll</ApplicationDllPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="$(MSCoreLibraryPath)" />
+    <Reference Include="$(SystemLibraryPath)" />
+    <Reference Include="$(SystemDrawingPath)" />
+    <Reference Include="$(SystemWindowsFormsPath)" />
+    <Reference Include="$(ThreadManagerLibraryPath)" />
+    <Reference Include="$(WrappedNativeAppLibraryPath)" />
+    <Reference Include="$(OpenGLFormLibraryPath)" />
+    <Reference Include="$(ApplicationDllPath)" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormStart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStart.Designer.cs">
+      <DependentUpon>FormStart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormStart.resx">
+      <DependentUpon>FormStart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

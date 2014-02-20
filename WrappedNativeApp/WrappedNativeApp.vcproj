@@ -138,7 +138,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="OpenGL32.lib glu32.lib gdi32.lib User32.lib $(NoInherit)"
+				AdditionalDependencies="OpenGL32.lib gdi32.lib User32.lib $(NoInherit)"
 				LinkIncremental="2"
 				GenerateDebugInformation="true"
 				AssemblyDebug="1"
@@ -211,7 +211,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="OpenGL32.lib glu32.lib gdi32.lib User32.lib $(NoInherit)"
+				AdditionalDependencies="OpenGL32.lib gdi32.lib User32.lib $(NoInherit)"
 				LinkIncremental="1"
 				AdditionalLibraryDirectories=""
 				GenerateDebugInformation="true"
@@ -285,7 +285,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="OpenGL32.lib glu32.lib gdi32.lib User32.lib $(NoInherit)"
+				AdditionalDependencies="OpenGL32.lib gdi32.lib User32.lib $(NoInherit)"
 				LinkIncremental="1"
 				AdditionalLibraryDirectories=""
 				GenerateDebugInformation="true"

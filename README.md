@@ -6,7 +6,7 @@ Licensed under the MIT license, see LICENSE.md for details.
 
 
 
-Monre is a 3D rendering engine primarily intended for running OpenGL ES 2.0 games on Windows, though it can be used for rendering with any version of OpenGL. It is a lightweight tool designed to help with development, testing, debugging and portability checking of native C/C++ parts of Android and iOS games. It is intended to provide a generic framework for any kind of C/C++ OpenGL application. It was initially developed using vs2008, but porting it to newer versions of Visual Studio shouldn't be too problematic.
+Monre is a 3D rendering engine primarily intended for running OpenGL ES 2.0 games on Windows, though it can be used for rendering with any version of OpenGL. It is a lightweight tool designed to help with development, testing, debugging and portability checking of native C/C++ parts of Android and iOS games. It is intended to provide a generic framework for any kind of C/C++ OpenGL application. It was initially developed using vs2008. vs2012 solution and project files were added. Porting to other versions of Visual Studio shouldn't be too problematic.
 
 
 

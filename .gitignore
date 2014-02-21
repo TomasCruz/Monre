@@ -5,12 +5,12 @@ ApplicationDll/obj/
 NativeApp/Debug/
 NativeApp/Debug64/
 NativeApp/Release/
-NativeApp/Releas64/
+NativeApp/Release64/
 
 OpenGLForm/Debug/
 OpenGLForm/Debug64/
 OpenGLForm/Release/
-OpenGLForm/Releas64/
+OpenGLForm/Release64/
 
 OpenGLFormApplication/bin/
 OpenGLFormApplication/obj/
@@ -18,18 +18,18 @@ OpenGLFormApplication/obj/
 ThreadManager/Debug/
 ThreadManager/Debug64/
 ThreadManager/Release/
-ThreadManager/Releas64/
+ThreadManager/Release64/
 
 WrappedNativeApp/Debug/
 WrappedNativeApp/Debug64/
 WrappedNativeApp/Release/
-WrappedNativeApp/Releas64/
+WrappedNativeApp/Release64/
 
 # Output directories
-Debug/*
-Debug64/*
-Release/*
-Releas64/*
+Debug
+Debug64
+Release
+Release64
 
 # User-specific files
 *.suo

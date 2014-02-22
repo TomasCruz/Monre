@@ -20,9 +20,10 @@ namespace ThreadManager
 	{
 		hDC = GetDC((HWND)formHandle.ToPointer());
 		if (hDC == NULL)
-			return;
+			throw gcnew Exception("GetDC failed!");
 
-		MySetPixelFormat();
+		if (!MySetPixelFormat())
+			throw gcnew Exception("MySetPixelFormat failed!");
 	}
 
 	void GLThreadWrapper::DeinitThread()
@@ -60,7 +61,12 @@ namespace ThreadManager
 	void GLThreadWrapper::ExecuteThread(Object^ startArg)
 	{
 		ProcessThreadList((List<Object^>^)startArg);
-		InitThread();
+		try { InitThread(); }
+		catch (Exception^ exc)
+		{
+			System::Windows::Forms::MessageBox::Show(exc->ToString());
+			System::Environment::Exit(1);
+		}
 
 		// OpenGL init needs to be executed before execution of rendering. Rendering might have been scheduled by now, but not yet executed
 		try { delegateDictionary[GLThreadActionStrings::glInitString]->DynamicInvoke(formHandle, (IntPtr)hDC, (IntPtr)hGLRC); }

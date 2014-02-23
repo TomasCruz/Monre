@@ -68,7 +68,7 @@ void NativeApplication::OpenGLInit(HWND wnd, HDC deviceContext, HGLRC renderingC
 	m_deviceContext = deviceContext;
 	m_renderingContext = renderingContext;
 	if (!ContextUtil::DestroyDummyAndCreateRealContext(gl, hwnd, &m_deviceContext, &m_renderingContext))
-		return;
+		throw NativeException("Destroying dummy and creating real context failed");
 
 	std::vector<GLuint> shaderList;
 	try

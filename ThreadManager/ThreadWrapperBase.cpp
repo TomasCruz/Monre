@@ -126,9 +126,13 @@ namespace ThreadManager
 		// Exception handling below can be used to debug which actions were invoked on wrong thread
 
 		try { actionItem->ActionDelegate->DynamicInvoke( actionItem->Arguments ); }
-		catch(System::Reflection::TargetInvocationException^ tie) { System::Windows::Forms::MessageBox::Show(tie->ToString()); }
+		catch(System::Reflection::TargetInvocationException^ tie)
+		{
+			NativeExceptionBase^ inner = (NativeExceptionBase^)tie->InnerException;
+			System::Windows::Forms::MessageBox::Show(inner->ToString());
+			System::Environment::Exit(1);
+		}
 		catch(System::Reflection::TargetParameterCountException^ tpce) { System::Windows::Forms::MessageBox::Show(tpce->ToString()); }
-		catch(NativeExceptionBase^ e) { System::Windows::Forms::MessageBox::Show(e->ToString()); }
 	}
 
 	void ThreadWrapperBase::ProcessThreadList(List<Object^>^ threadList)

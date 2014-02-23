@@ -56,6 +56,7 @@ namespace ApplicationDll
                 System.Windows.Forms.MessageBox.Show(inner.ToString());
                 Environment.Exit(1);
             }
+    		catch(System.Reflection.TargetParameterCountException tpce) { System.Windows.Forms.MessageBox.Show(tpce.ToString()); }
         }
 
 		protected override void DeinitThread()
@@ -65,7 +66,14 @@ namespace ApplicationDll
 			    return;
 
 		    Delegate nativeApplicationDestroyDelegate = delegateDictionary[keyString];
-		    nativeApplicationDestroyDelegate.DynamicInvoke(null);
+		    try { nativeApplicationDestroyDelegate.DynamicInvoke(null); }
+            catch (TargetInvocationException tie)
+            {
+                NativeExceptionBase inner = (NativeExceptionBase)tie.InnerException;
+                System.Windows.Forms.MessageBox.Show(inner.ToString());
+                Environment.Exit(1);
+            }
+            catch (System.Reflection.TargetParameterCountException tpce) { System.Windows.Forms.MessageBox.Show(tpce.ToString()); }
         }
 
         protected override void Dispose(bool disposing)

@@ -77,7 +77,6 @@ namespace ThreadManager
 			System::Environment::Exit(1);
 		}
 		catch(System::Reflection::TargetParameterCountException^ tpce) { System::Windows::Forms::MessageBox::Show(tpce->ToString()); }
-		catch(NativeExceptionBase^ e) { System::Windows::Forms::MessageBox::Show(e->ToString()); }
 
 		appThreadWrapper->EnqueueStartRenderingTimer();
 

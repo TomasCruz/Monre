@@ -29,7 +29,7 @@ namespace ThreadManager
 	void GLThreadWrapper::DeinitThread()
 	{
 		try { delegateDictionary[GLThreadActionStrings::glDeinitString]->DynamicInvoke(); }
-		catch(Exception^) {} // ignore those
+		catch(Exception^) {} // ignore those, for now
 	}
 
 	void GLThreadWrapper::EnqueueOpenGLInit(IntPtr windowHandle, IntPtr deviceContext, IntPtr renderingContext)
@@ -70,6 +70,11 @@ namespace ThreadManager
 
 		// OpenGL init needs to be executed before execution of rendering. Rendering might have been scheduled by now, but not yet executed
 		try { delegateDictionary[GLThreadActionStrings::glInitString]->DynamicInvoke(formHandle, (IntPtr)hDC, (IntPtr)hGLRC); }
+		catch (NativeExceptionBase^ neb)
+		{
+			System::Windows::Forms::MessageBox::Show(neb->ToString());
+			System::Environment::Exit(1);
+		}
 		catch(System::Reflection::TargetInvocationException^ tie)
 		{
 			NativeExceptionBase^ inner = (NativeExceptionBase^)tie->InnerException;

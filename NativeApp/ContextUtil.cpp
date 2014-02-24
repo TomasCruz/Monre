@@ -82,7 +82,8 @@ bool ContextUtil::DestroyDummyAndCreateRealContext(LoadUtil& gl, HWND wnd, HDC* 
 	attributeList[2] = WGL_CONTEXT_MINOR_VERSION_ARB;
 	attributeList[3] = 3;
 	attributeList[4] = WGL_CONTEXT_PROFILE_MASK_ARB;
-	attributeList[5] = WGL_CONTEXT_CORE_PROFILE_BIT_ARB;
+	//attributeList[5] = WGL_CONTEXT_CORE_PROFILE_BIT_ARB;
+	attributeList[5] = WGL_CONTEXT_COMPATIBILITY_PROFILE_BIT_ARB;
 
 	// Null terminate the attribute list.
 	attributeList[6] = 0;

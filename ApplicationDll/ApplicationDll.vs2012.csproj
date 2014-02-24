@@ -112,9 +112,7 @@
     <Reference Include="$(WrappedNativeAppLibraryPath)" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApplicationForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="ApplicationForm.cs" />
     <Compile Include="ApplicationForm.Designer.cs">
       <DependentUpon>ApplicationForm.cs</DependentUpon>
     </Compile>

@@ -50,13 +50,18 @@ namespace ApplicationDll
 
             Delegate nativeApplicationStartDelegate = delegateDictionary[keyString];
             try { nativeApplicationStartDelegate.DynamicInvoke(startObject); }
+            catch (WrappedNativeApp.WrappedNativeException wne)
+            {
+                System.Windows.Forms.MessageBox.Show(wne.ToString());
+                Environment.Exit(1);
+            }
             catch (TargetInvocationException tie)
             {
                 NativeExceptionBase inner = (NativeExceptionBase)tie.InnerException;
                 System.Windows.Forms.MessageBox.Show(inner.ToString());
                 Environment.Exit(1);
             }
-    		catch(System.Reflection.TargetParameterCountException tpce) { System.Windows.Forms.MessageBox.Show(tpce.ToString()); }
+            catch (System.Reflection.TargetParameterCountException tpce) { System.Windows.Forms.MessageBox.Show(tpce.ToString()); }
         }
 
 		protected override void DeinitThread()

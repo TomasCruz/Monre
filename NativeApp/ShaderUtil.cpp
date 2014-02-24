@@ -31,11 +31,7 @@ GLuint ShaderUtil::LoadAndCompileShader(GLenum eShaderType, const std::string &s
 		return shader;
 	}
 	catch(NativeException&) { throw; }
-	catch(std::exception &e)
-	{
-		fprintf(stderr, "%s\n", e.what());
-		throw;
-	}
+	catch(std::exception &e) { throw NativeException(const_cast<char*>(e.what())); }
 
 	return 0;
 }

@@ -36,7 +36,8 @@ namespace OpenGLForm
 
 	void OpenGLForm::OnResize(EventArgs^ e)
 	{
-		threadManager->EnqueueOpenGLResize(this->ClientRectangle.Width, this->ClientRectangle.Height);
+		if (threadManager)
+			threadManager->EnqueueOpenGLResize(this->ClientRectangle.Width, this->ClientRectangle.Height);
 	}
 
 	void OpenGLForm::OnPaintBackground(PaintEventArgs^ e)

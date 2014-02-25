@@ -31,7 +31,7 @@ extern GLES2BINDATTRIBLOCATIONPROC glBindAttribLocation;
 extern GLES2BINDBUFFERPROC glBindBuffer;
 extern GLES2BINDFRAMEBUFFERPROC glBindFramebuffer;
 extern GLES2BINDRENDERBUFFERPROC glBindRenderbuffer;
-//extern GLES2BINDTEXTUREPROC glBindTexture; // defined in gl.h
+//glBindTexture; // defined in gl.h
 extern GLES2BLENDCOLORPROC glBlendColor;
 extern GLES2BLENDEQUATIONPROC glBlendEquation;
 extern GLES2BLENDEQUATIONSEPARATEPROC glBlendEquationSeparate;

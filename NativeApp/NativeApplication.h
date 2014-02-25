@@ -37,7 +37,6 @@ private:
 	GLuint modelMatrixUnif;
 	GLuint perspectiveMatrixUnif;
 	GLuint vertexBufferObject, indexBufferObject;
-	GLuint vao;
 
 	int windowWidth, windowHeight;
 	float aspectRatio;

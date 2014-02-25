@@ -67,8 +67,8 @@ void NativeApplication::OpenGLInit(HWND wnd, HDC deviceContext, HGLRC renderingC
 	hwnd = wnd;
 	m_deviceContext = deviceContext;
 	m_renderingContext = renderingContext;
-	if (!ContextUtil::DestroyDummyAndCreateRealContext(gl, hwnd, &m_deviceContext, &m_renderingContext))
-		throw NativeException("Destroying dummy and creating real context failed");
+	try { ContextUtil::DestroyDummyAndCreateRealContext(gl, hwnd, &m_deviceContext, &m_renderingContext); }
+	catch(NativeException&) { throw; }
 
 	std::vector<GLuint> shaderList;
 	try
@@ -90,11 +90,6 @@ void NativeApplication::OpenGLInit(HWND wnd, HDC deviceContext, HGLRC renderingC
 	glUseProgram(0);
 
 	InitializeVertexBuffer();
-
-	// VAO is necessary when using core profile, unless code is run using NVidia card. At least, that's how I understood this obscure subject.
-	// see https://www.opengl.org/discussion_boards/showthread.php/181092-Drawing-a-single-point-without-VAO-on-NVIDIA-and-AMD
-	//gl.glGenVertexArrays(1, &vao);
-	//gl.glBindVertexArray(vao);
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, indexBufferObject);
 
 	glEnable(GL_CULL_FACE);

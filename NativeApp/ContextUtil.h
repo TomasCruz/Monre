@@ -11,6 +11,6 @@ public:
 	ContextUtil();
 	~ContextUtil();
 
-	bool static DestroyDummyAndCreateRealContext(LoadUtil& gl, HWND wnd, HDC* deviceContext, HGLRC* renderingContext);
+	void static DestroyDummyAndCreateRealContext(LoadUtil& gl, HWND wnd, HDC* deviceContext, HGLRC* renderingContext);
 };
 #endif

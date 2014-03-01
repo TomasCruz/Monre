@@ -18,6 +18,7 @@ MonreDemoApplication description
 Reusable parts of MonreDemoApplication are projects OpenGLForm and ThreadManager.
 - OpenGLForm contains inherited Win Form enabled for OpenGL rendering. It can also go full screen.
 - ThreadManager is a collection of classes for managing threads used in application. Some of classes are abstract and some are ready to use as they are.
+
 More detailed description of Monre projects, and how to use Monre can be found at https://github.com/TomasCruz/Monre/wiki/Monre-tutorial
 
 Other projects in MonreDemoApplication:

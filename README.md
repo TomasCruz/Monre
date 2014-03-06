@@ -28,3 +28,7 @@ Other projects in MonreDemoApplication:
 - OpenGLFormApplication is a top level project, containing the start form (for setting application parameters)
 
 Last two projects can be merged in one, and can be written in any .NET language.
+
+
+Author can be contacted on:
+toma.krstic.76@gmail.com
